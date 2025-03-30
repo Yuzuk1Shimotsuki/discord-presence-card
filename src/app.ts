@@ -8,7 +8,7 @@ const app = express();
 
 const cache = apicache.middleware;
 
-app.get("/api/ping", discordSelf);
-app.get("/api/user/:id", cache(process.env.NODE_ENV === 'development' ? '1 second' : '5 seconds'), discordUser);
+app.get("/discord-api/ping", discordSelf);
+app.get("/discord-api/user/:id", cache(process.env.NODE_ENV === 'development' ? '1 second' : '5 seconds'), discordUser);
 
 export default app;
