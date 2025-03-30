@@ -1,6 +1,6 @@
 services:
   api:
-    container_name: api
+    container_name: discord-presence-api
     build: .
     ports:
       - "3000:3000"
